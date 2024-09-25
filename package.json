@@ -1,0 +1,45 @@
+{
+	"name": "@ouroboros/react-portal",
+	"version": "1.0.0",
+	"description": "Portal Component. Appends children to the end of body, disconnecting it from its own parent Component.",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"scripts": {
+		"build": "tslint -p tsconfig.json && tsc",
+		"clean": "rm index.js index.d.ts",
+		"for_local": "npm install; tslint -p tsconfig.json && tsc; rm -Rf node_modules/@types/react node_modules/@emotion/react node_modules/@emotion/styled node_modules/react node_modules/react-dom",
+		"test": "echo \"Error: no test specified.\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ouroboroscoding/react-portal.git"
+	},
+	"keywords": [
+		"@ouroboros/react-portal",
+		"react"
+	],
+	"author": "Chris Nasr <chris@ouroboroscoding.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ouroboroscoding/react-portal/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.0",
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.3.0",
+		"@types/uuid": "^10.0.0",
+		"tslint": "^6.1.3",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^4.8.3"
+	},
+	"dependencies": {
+		"prop-types": "^15.8.1",
+		"uuid": "^10.0.0"
+	},
+	"peerDependencies": {
+		"@emotion/react": "^11.10.6",
+		"@emotion/styled": "^11.10.6",
+		"react": "^17.0.0 || ^18.0.0",
+		"react-dom": "^17.0.0 || ^18.0.0"
+	}
+}
