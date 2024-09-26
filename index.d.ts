@@ -13,6 +13,8 @@ import React from 'react';
 export type PortalProps = {
     children: React.ReactNode;
     className?: string;
+    id?: string;
+    style?: React.CSSProperties;
 };
 /**
  * Portal

@@ -18,7 +18,9 @@ import { v4 as uuid } from 'uuid';
 // Types
 export type PortalProps = {
 	children: React.ReactNode,
-	className?: string
+	className?: string,
+	id?: string,
+	style?: React.CSSProperties
 }
 
 /**
@@ -50,12 +52,27 @@ export default class Portal
 		// Create a new element
 		this.el = document.createElement('div');
 
-		// Give it a unique ID
-		this.el.id = uuid();
+		// Give it a unique ID if one wasn't passed
+		this.el.setAttribute('id', props.id || uuid());
 
 		// If we have a className
 		if(props.className) {
-			this.el.className = props.className;
+			this.el.setAttribute('class', props.className);
+		}
+
+		// If we have a style object
+		if(props.style) {
+
+			// Reduce it to a string
+			const sStyle = Object.keys(props.style).map(v => {
+				const ck = v.replace(/[A-Z]/g, s => `-${s.toLowerCase()}`);
+				const cv = (props.style as React.CSSProperties)[v as keyof React.CSSProperties];
+				if(typeof cv === 'string' && cv.indexOf("'") > -1) {
+					cv.replace("'", "");
+				}
+				return `${ck}:${cv}`;
+			}).join(';')
+			this.el.setAttribute('style', sStyle);
 		}
 	}
 
