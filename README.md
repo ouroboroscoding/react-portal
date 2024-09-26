@@ -36,3 +36,13 @@ function App(props) {
 ```
 
 ![Example image of component in use](example.png)
+
+## Props
+
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| className | string | no | CSS class name |
+| id | string | no | Element ID |
+| style | object | no | React.CSSProperties |
+
+All props will be passed to the DIV element created and attached to the body. If no ID is passed, a universally unique ID will be created and added.
