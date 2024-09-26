@@ -25,9 +25,7 @@ export type PortalProps = {
  * @access public
  * @extends React.Component
  */
-export default class Portal extends React.Component<{
-    children: React.ReactNode;
-}> {
+export default class Portal extends React.Component<PortalProps> {
     el: HTMLDivElement;
     static propTypes: {
         className: PropTypes.Requireable<string>;

@@ -1,6 +1,6 @@
 {
 	"name": "@ouroboros/react-portal",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Portal Component. Appends children to the end of body, disconnecting it from its own parent Component.",
 	"main": "index.js",
 	"types": "index.d.ts",
