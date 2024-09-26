@@ -33,7 +33,7 @@ export type PortalProps = {
  * @extends React.Component
  */
 export default class Portal
-	extends React.Component<{ children: React.ReactNode }> {
+	extends React.Component<PortalProps> {
 
 	// Local element
 	el: HTMLDivElement;
