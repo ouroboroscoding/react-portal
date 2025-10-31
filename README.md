@@ -43,6 +43,7 @@ function App(props) {
 | ---- | ---- | -------- | ----------- |
 | className | string | no | CSS class name |
 | id | string | no | Element ID |
+| onClick | function | no | A function that takes a single MouseEvent parameter |
 | style | object | no | React.CSSProperties |
 
 All props will be passed to the DIV element created and attached to the body. If no ID is passed, a universally unique ID will be created and added.
