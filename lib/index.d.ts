@@ -14,6 +14,7 @@ export type PortalProps = {
     children: React.ReactNode;
     className?: string;
     id?: string;
+    onClick?: (ev: MouseEvent) => void;
     style?: React.CSSProperties;
 };
 /**
