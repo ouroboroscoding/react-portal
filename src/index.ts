@@ -20,6 +20,7 @@ export type PortalProps = {
 	children: React.ReactNode,
 	className?: string,
 	id?: string,
+	onClick?: (ev: MouseEvent) => void
 	style?: React.CSSProperties
 }
 
@@ -32,8 +33,7 @@ export type PortalProps = {
  * @access public
  * @extends React.Component
  */
-export default class Portal
-	extends React.Component<PortalProps> {
+export default class Portal extends React.Component<PortalProps> {
 
 	// Local element
 	el: HTMLDivElement;
@@ -73,6 +73,11 @@ export default class Portal
 				return `${ck}:${cv}`;
 			}).join(';')
 			this.el.setAttribute('style', sStyle);
+		}
+
+		// If there's an onClick
+		if(props.onClick) {
+			this.el.addEventListener('click', props.onClick);
 		}
 	}
 
